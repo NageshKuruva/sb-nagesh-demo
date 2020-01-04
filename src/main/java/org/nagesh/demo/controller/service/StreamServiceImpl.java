@@ -3,6 +3,7 @@ package org.nagesh.demo.controller.service;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import org.springframework.stereotype.Service;
 
@@ -24,6 +25,13 @@ public class StreamServiceImpl implements StreamService {
 		String methodOutput = "SUCCESS";//TODO -> add method definiton & output -> display on frontend
 		
 		return methodOutput;
+	}
+
+	@Override
+	public String printRangeF() {
+		IntStream
+		.range(0, 24).forEach(System.out::print);
+		return null;
 	}
 
 }
